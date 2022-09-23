@@ -1,11 +1,13 @@
 import './App.css';
 import { Route } from "react-router-dom"
-import Welcome from './components/Welcome'
-import Products from './components/Products'
+import Welcome from './pages/Welcome'
+import Products from './pages/Products'
+import MainHeader from './components/MainHeader';
 
 function App() {
   return (
     <div>
+      <MainHeader></MainHeader>
       <Route path="/welcome">
         <Welcome></Welcome>
       </Route>
@@ -17,3 +19,6 @@ function App() {
 }
 
 export default App
+
+
+
