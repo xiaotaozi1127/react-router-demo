@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import classes from "./MainHeader.module.css";
 
 const MainHeader = () => {
     //it will refresh the page
-    return (<header>
+    return (<header className={classes.header}>
         <ul>
             <li>
                 <Link to="/welcome">Welcome</Link>
@@ -12,7 +13,6 @@ const MainHeader = () => {
             </li>
         </ul>
     </header>)
-
 }
 
 export default MainHeader;
