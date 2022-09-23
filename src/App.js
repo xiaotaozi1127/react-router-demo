@@ -1,5 +1,5 @@
 import './App.css';
-import { Route } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 import Welcome from './pages/Welcome'
 import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail';
@@ -9,15 +9,20 @@ function App() {
   return (
     <div>
       <MainHeader></MainHeader>
-      <Route path="/welcome">
-        <Welcome></Welcome>
-      </Route>
-      <Route path="/products">
-        <Products></Products>
-      </Route>
-      <Route path="/products/:productId">
-        <ProductDetail />
-      </Route>
+      <main>
+        <Switch>
+          <Route path="/welcome">
+            <Welcome></Welcome>
+          </Route>
+          <Route path="/products" exact>
+            <Products></Products>
+          </Route>
+          <Route path="/products/:productId">
+            <ProductDetail />
+          </Route>
+        </Switch>
+      </main>
+      
     </div>
   );
 }
