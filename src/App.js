@@ -9,10 +9,10 @@ function App() {
     return (
         <div>
             <MainNavigation/>
-            <Route path='/welcome' exact>
+            <Route path='/welcome'>
                 <Welcome/>
             </Route>
-            <Route path='/products'>
+            <Route path='/products' exact>
                 <Products/>
             </Route>
             <Route path='/products/:productId'>
