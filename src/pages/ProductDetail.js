@@ -1,11 +1,11 @@
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ProductDetail = () => {
     const params = useParams();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const clickHandler = () => {
-        history.push("/products")
+        navigate("/products")
     }
     return (
         <section>
